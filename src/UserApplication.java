@@ -222,7 +222,8 @@ public class UserApplication {
 			RequestCodes.write("ARQ - ACK (positive acknowledgement) result code: " + ack_result_code + "\r\n");			
 			RequestCodes.write("ARQ - NACK (negative acknowledgement) result code: " + nack_result_code + "\r\n");			
 		} catch (Exception x) {
-			System.out.println(x);
+			System.out.println("Caught EXCEPTION: " + x + " ! Couldn't create files: RequestCodes.txt .");
+			System.out.println("Request codes are not saved into a file!");
 		}
 	}
 	
@@ -240,7 +241,8 @@ public class UserApplication {
 			Applications_DatesTimes.write("Images application run at: " + DatesTimes[2].format(DateTimeFORMAT) + "\r\n");
 			Applications_DatesTimes.write("GPS application run at: " + DatesTimes[3].format(DateTimeFORMAT) + "\r\n");	
 		} catch (Exception x) {
-			System.out.println(x);
+			System.out.println("Caught EXCEPTION: " + x + " ! Couldn't create files: Applications_DatesTimes.txt .");
+			System.out.println("Applications' execution times are not saved into a file!");
 		}
 	}	
 	
