@@ -79,9 +79,11 @@ public class Image {
 			
 			// Console output:
 			// (CONFIRMATION MESSAGE)
-			System.out.println("\n");
+			System.out.println();
+			System.out.println();
 			System.out.println("[IMAGE][ SUCCESSFULLY generated image: " + DirectoryAndFileNameAndExtension + " ]");
-			System.out.println("\n");
+			System.out.println();
+			System.out.println();
 
 			return true;
 		} else {

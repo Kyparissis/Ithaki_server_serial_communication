@@ -66,7 +66,7 @@ public class ARQ {
 				
 				// Increasing ACK and NACK counters accordingly
 				NackResultsFULLCounter += NackResultsCounterPerARQPacket;	
-				AckResultsFULLCounter++;									
+				AckResultsFULLCounter++;	// == Error-free packets we received									
 
 				
 				// Console output:
@@ -82,7 +82,7 @@ public class ARQ {
 			
 			// Results console output:
 			System.out.println("[ARQ][ Received " + AckResultsFULLCounter + " packets SUCCESSFULLY (Error-FREE) from Ithaki's Virtual Modem ]");
-			System.out.println("\n( We had, IN TOTAL: "+ NackResultsFULLCounter + " NACK(negative acknowledgement) packet results in "
+			System.out.println("\n( We had, IN TOTAL: "+ NackResultsFULLCounter + " NACK(negative acknowledgement) packet results and "
 													   + AckResultsFULLCounter + " ACK(positive acknowledgement) packet results. )");
 			System.out.println(".");
 			System.out.println("BER (Bit Error Rate) Value = " + getBitErrorRate(AckResultsFULLCounter,NackResultsFULLCounter));
