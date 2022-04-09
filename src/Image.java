@@ -1,10 +1,10 @@
 //package src;
 
+import ithakimodem.*;
+
 // ----------------------------------
 // 			 LIBRARIES
 // ----------------------------------
-import ithakimodem.*;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.ByteArrayOutputStream;

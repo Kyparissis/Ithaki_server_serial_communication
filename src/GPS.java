@@ -72,7 +72,7 @@ public class GPS {
 			}
 			
 			// DISTANCE CHOSEN GPS Points LISTS (1 Holding it's Latitude, the other it's Longitude)(SAME INDEX)
-			int NumberOfCoordsToSave = 4;
+			int NumberOfCoordsToSave = 5;
 			ArrayList<String> ChosenCoordsLIST_LATITUDE = new ArrayList<String>();
 			ArrayList<String> ChosenCoordsLIST_LONGITUDE = new ArrayList<String>();
 			
@@ -101,22 +101,20 @@ public class GPS {
 							DDM2DecDegrees(getLongitudeDegreesINT(AllLongitudeCoordinates.get(j)),
 									   getLongitudeMinutesDOUBLE(AllLongitudeCoordinates.get(j)))) >= DMS2DecRadians(0, 0, 4)) {						
 						// If distance check true:
-						// Checks if the two points already exist in the "chosen" list due to a previous measurement 
+						// Checks if the first point already exisst in the "chosen" list due to a previous measurement 
 						if ((!ChosenCoordsLIST_LATITUDE.contains(AllLatitudeCoordinates.get(i)))   && 
-							(!ChosenCoordsLIST_LONGITUDE.contains(AllLongitudeCoordinates.get(i))) && 
-							(!ChosenCoordsLIST_LATITUDE.contains(AllLatitudeCoordinates.get(j)))   && 
-							(!ChosenCoordsLIST_LONGITUDE.contains(AllLongitudeCoordinates.get(j)))) {
-								// If unique points true:
+							(!ChosenCoordsLIST_LONGITUDE.contains(AllLongitudeCoordinates.get(i)))) {
+								// If unique point true:
 								// Save Point #1 Latitude and Longitude
 								ChosenCoordsLIST_LATITUDE.add(AllLatitudeCoordinates.get(i));
 								ChosenCoordsLIST_LONGITUDE.add(AllLongitudeCoordinates.get(i));
 								System.out.println("[GPS] Point found: LATITUDE: " + AllLatitudeCoordinates.get(i) + " , LONGITUDE: " + AllLongitudeCoordinates.get(i));
-				
-								// Save Point #2 Latitude and Longitude
-								ChosenCoordsLIST_LATITUDE.add(AllLatitudeCoordinates.get(j));
-								ChosenCoordsLIST_LONGITUDE.add(AllLongitudeCoordinates.get(j));
-								System.out.println("[GPS] Point found: LATITUDE: " + AllLatitudeCoordinates.get(j) + " , LONGITUDE: " + AllLongitudeCoordinates.get(j));
 						}
+						// Save Point #2 Latitude and Longitude ( This point doesnt need to be checked)
+						ChosenCoordsLIST_LATITUDE.add(AllLatitudeCoordinates.get(j));
+						ChosenCoordsLIST_LONGITUDE.add(AllLongitudeCoordinates.get(j));
+						System.out.println("[GPS] Point found: LATITUDE: " + AllLatitudeCoordinates.get(j) + " , LONGITUDE: " + AllLongitudeCoordinates.get(j));
+						
 						i = j - 1; // If we find a valid distance between Point i and Point j we continue
 								   // searching more Points after Point j ( j - 1 because loop does j++ )
 						break;
@@ -133,6 +131,8 @@ public class GPS {
 			for (int i = 0; i < ChosenCoordsLIST_LATITUDE.size() && i < 9; i++) {
 				FULL_TParameter += generateT_Parameter(ChosenCoordsLIST_LATITUDE.get(i), ChosenCoordsLIST_LONGITUDE.get(i));
 			}
+//			// Console output:
+//			System.out.println("[GPS][ Those points create the following T= parameter: " + FULL_TParameter + " ]");
 			
 			return FULL_TParameter; 
 			
@@ -279,7 +279,7 @@ public class GPS {
 	/**
 	 * Methods to parse the NMEA Protocol GPS packets sent by the VirtualModem.
 	 * 
-	 * SiRF NMEA Reference Manual: http://ithaki.eng.auth.gr/netlab/sirf-nmea-reference-manual.pdf
+	 * @bibliography SiRF NMEA Reference Manual: http://ithaki.eng.auth.gr/netlab/sirf-nmea-reference-manual.pdf
 	 * 
 	 * @param NMEAProtocol_GPS_FullString : A NMEA GPS packet sent by the VirtuaModem. Example:
 	 *                        "$GPGGA,045208.000,4037.6331,N,02257.5633,E,1,07,1.5,57.8,M,36.1,M,,0000*6D"

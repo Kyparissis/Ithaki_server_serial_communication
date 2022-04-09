@@ -34,7 +34,8 @@ public class ARQ {
 		// Trying to create output files in order to store: ARQ Packet times && 
 		//													Nack requests per ARQ for a packet
 		try (FileWriter ARQPacketsTimes = new FileWriter(new File(folder + "ARQ_PacketsReceiveTimesMillis.txt"));
-			 FileWriter ARQNackResultsCounterPerPacket = new FileWriter(new File(folder + "ARQ_NackResultsPerPacket.txt"))) {
+			 FileWriter ARQNackResultsCounterPerPacket = new FileWriter(new File(folder + "ARQ_NackResultsPerPacket.txt"));
+			 FileWriter ARQBitErrorRate = new FileWriter(new File(folder + "ARQ_BitErrorRate.txt"))) {
 						
 			String[] getPacketARQResults = new String[2];
 			int NackResultsCounterPerARQPacket = 0;
@@ -74,7 +75,7 @@ public class ARQ {
 				
 				// Files output:
 				ARQNackResultsCounterPerPacket.write(NackResultsCounterPerARQPacket + "\r\n");		// Save packet's nack counter
-				ARQPacketsTimes.write((packet_receivedTime - packet_sentTime) + "\r\n");			// Save packet's system response time
+				ARQPacketsTimes.write((packet_receivedTime - packet_sentTime) + "\r\n");			// Save packet's system response times
 			}
 
 			
@@ -82,11 +83,15 @@ public class ARQ {
 			
 			// Results console output:
 			System.out.println("[ARQ][ Received " + AckResultsFULLCounter + " packets SUCCESSFULLY (Error-FREE) from Ithaki's Virtual Modem ]");
-			System.out.println("\n( We had, IN TOTAL: "+ NackResultsFULLCounter + " NACK(negative acknowledgement) packet results and "
-													   + AckResultsFULLCounter + " ACK(positive acknowledgement) packet results. )");
+			System.out.println("\n( We had, IN TOTAL: "+ NackResultsFULLCounter + " NACK(negative acknowledgement) packet results in a total of "
+													   + (AckResultsFULLCounter + NackResultsFULLCounter) + " requests. )");
 			System.out.println(".");
-			System.out.println("BER (Bit Error Rate) Value = " + getBitErrorRate(AckResultsFULLCounter,NackResultsFULLCounter));
+			double BER = getBitErrorRate(AckResultsFULLCounter,NackResultsFULLCounter);
 			
+			// Console output:
+			System.out.println("BER (Bit Error Rate) Value = " + BER);
+			// File output:
+			ARQBitErrorRate.write("BER (Bit Error Rate) Value = " + BER);
 		} catch (Exception x) {	 // If files couldn't be created, THROW EXCEPTION
 			System.out.println("Caught EXCEPTION: " + x + " ! Couldn't create files: "+ folder + "ARQPacketsTimes.txt AND"
 																					  + folder + "ARQPacketsNackRequestsPerPacket.txt .");
@@ -135,14 +140,15 @@ public class ARQ {
 				NackResultsCounter ++;
 				
 				// Console output:
-				System.out.println("---> Received packet again: " + ReceivedPacketText);				
+				System.out.println("---> Received packet again. Now we got: " + ReceivedPacketText);				
 			} else {
 				// ERROR FREE
 				break;
 			}
 		}		
 		// Console output:
-		System.out.println("------> Error-FREE packet: " + ReceivedPacketText + " (Received after "+ NackResultsCounter + " NACK results / re-requests).");
+		System.out.println("------> Finally, Error-FREE packet is: " + ReceivedPacketText );
+		System.out.println("[ARQ][Received after " + NackResultsCounter + " NACK results / re-requests]");
 		
 		// Return the error free packet AND the number of times the modem resent the same packet due to errors
 		return new String[]{ReceivedPacketText, 
@@ -202,12 +208,12 @@ public class ARQ {
 	/**
 	 * Calculates the BER (Bit Error Rate) by using the formula:
 	 * 				P1 = (1 - Pb) ^ F	(1)
-	 * ,where: P1: Probability that a bit is received in error; aka the Bit Error Rate (BER)
-	 * 		   Pb: Probability that a frame/sequence arrives witn no bit errors
+	 * ,where: Pb: Probability that a bit is received in error; aka the Bit Error Rate (BER)
+	 * 		   P1: Probability that a frame/sequence arrives witn no bit errors
 	 * 		    F: Number of bits per frame/sequence
 	 * 
 	 * so (1) => P1 ^ (1/F) = 1 - Pb => 
-	 * 	   		 Pb = 1 - P1 ^ (1/F) => 
+	 * 	   		 Pb = 1 - P1 ^ (1/F) <=> 
 	 *     		 BER = 1 - P1 ^ (1/F)
 	 * @see Bibliography:
 	 * Data and Computer Communications 8th Edition William Starlings -> Page 186 (6.3 ERROR DETECTION)

@@ -66,9 +66,9 @@ public class Echo {
 			// Results console output:
 		    System.out.println("[ECHO][ Received " + NumberOfPacketsReceived +" packets SUCCESSFULLY from Ithaki's Virtual Modem ]");
 			
-			
 		} catch (Exception x) {
-			System.out.println("Caught EXCEPTION: " + x + " ! Couldn't create files: "+ folder + "echoPacketsTimes.txt .");
+			System.out.println("Caught EXCEPTION: " + x + " ! Couldn't create files: "+ folder + "echoPacketsTimes.txt AND" +
+					                                                                    folder + "Echo_PacketsINFO.txt .");
 		}
 		
 	}
