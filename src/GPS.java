@@ -78,7 +78,7 @@ public class GPS {
 			
 			String FULL_TParameter = "";
 			
-			System.out.println("(Analysing GPS packets' points to find ones with distance at least 4'' between them...)");
+			System.out.println("(Analysing GPS packets' points to find ones with a distance, between them, of at least 4''...)");
 			// Loop from Point #0 to Point #MAX and then find a second Point with distance greater or equal than 4'' to the first one
 			for (int i = 0; i < AllLatitudeCoordinates.size() && ChosenCoordsLIST_LATITUDE.size() < NumberOfCoordsToSave; i++) {
 				for (int j = i; j < AllLatitudeCoordinates.size() && ChosenCoordsLIST_LATITUDE.size() < NumberOfCoordsToSave; j++) {
@@ -110,7 +110,7 @@ public class GPS {
 								ChosenCoordsLIST_LONGITUDE.add(AllLongitudeCoordinates.get(i));
 								System.out.println("[GPS] Point found: LATITUDE: " + AllLatitudeCoordinates.get(i) + " , LONGITUDE: " + AllLongitudeCoordinates.get(i));
 						}
-						// Save Point #2 Latitude and Longitude ( This point doesnt need to be checked)
+						// Save Point #2 Latitude and Longitude ( This point doesnt need to be checked / It can't already be in the list)
 						ChosenCoordsLIST_LATITUDE.add(AllLatitudeCoordinates.get(j));
 						ChosenCoordsLIST_LONGITUDE.add(AllLongitudeCoordinates.get(j));
 						System.out.println("[GPS] Point found: LATITUDE: " + AllLatitudeCoordinates.get(j) + " , LONGITUDE: " + AllLongitudeCoordinates.get(j));
@@ -356,8 +356,8 @@ public class GPS {
 //		return (NMEAProtocol_GPS_FullString.split(","))[6];
 //	}
 	
-//	// Returns the number of active satelites (from given ex. = "07" )
-//	private static String getActiveSatelites(String NMEAProtocol_GPS_FullString) { 
+//	// Returns the number of active satellites (from given ex. = "07" )
+//	private static String getActiveSatellites(String NMEAProtocol_GPS_FullString) { 
 //		return (NMEAProtocol_GPS_FullString.split(","))[7];
 //	}
 	

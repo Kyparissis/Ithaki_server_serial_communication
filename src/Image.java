@@ -20,7 +20,7 @@ public class Image {
 	/**
 	 * This method sends a request to the VirtualModem using the given
 	 * ImageRequestCode and then uses a ByteArrayOutputStream to save the image's
-	 * data sent SERIALLY by the VirtualModem.
+	 * data (bytes) sent SERIALLY by the VirtualModem.
 	 * 
 	 * @param VirtualModem     Ithaki's modem we send the request to
 	 * @param ImageRequestCode The request code in order to receive an image
@@ -28,7 +28,7 @@ public class Image {
 	 * @return The image's binary file's data in a byte array, from start of image
 	 *         delimiter to end of image delimiter (including the delimiters 4 bytes)
 	 */
-	public static byte[] getImageData(Modem VirtualModem, String ImageRequestCode) {
+	public static byte[] receiveImageBytes(Modem VirtualModem, String ImageRequestCode) {
 		ByteArrayOutputStream ImageDataBuffer = new ByteArrayOutputStream();
 		byte[] ImageData = null;
 

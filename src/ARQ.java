@@ -235,7 +235,7 @@ public class ARQ {
 		F = CharactersPerPacket * bitsPerChar;
 		
 		P1 = (((double)NumberOfFramesWITHOUTError) / ((double)(NumberOfFramesWITHOUTError + NumberOfFramesWITHError)));
-		BER = 1 - Math.pow(P1, 1.0/F);
+		BER = 1 - Math.pow(P1, (1.0/F));
 
 		return BER;
 	}
