@@ -25,7 +25,7 @@ public class UserApplication {
 		System.out.println("-----------------------------------------");
 		
 		// -----------------------------------------------------------
-		// SAVING Ithaki's REQUEST CODES and SESSION into VARIABLES
+		//     SAVING Ithaki's REQUEST CODES into VARIABLES
 		// 	(from: http://ithaki.eng.auth.gr/netlab/action.php) 
 		// -----------------------------------------------------------		
 		final String echo_request_code = "E????";					// Echo request code
