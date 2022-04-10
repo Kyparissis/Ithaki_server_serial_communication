@@ -1,0 +1,9 @@
+Echo request code: E1906
+ARQ request code: M5491
+Image request code (Tx/Rx error free): M5491
+Image request code (Tx/Rx with errors): G7272
+GPS request code: P7452
+GPS - R= Parameter code: R=1028099
+GPS - Points' Full T= Parameter code: T=225748403740T=225744403737T=225739403735T=225734403733T=225728403732
+ARQ - ACK (positive acknowledgement) result code: Q0653
+ARQ - NACK (negative acknowledgement) result code: R4097
