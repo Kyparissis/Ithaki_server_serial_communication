@@ -1,5 +1,4 @@
 Echo request code: E1906
-ARQ request code: M5491
 Image request code (Tx/Rx error free): M5491
 Image request code (Tx/Rx with errors): G7272
 GPS request code: P7452
