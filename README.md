@@ -31,5 +31,5 @@ This project's code is an Eclipse IDE project... (TODO: ADD MORE STUFF HERE)
 ---
 ---
 ## TO DO:
-- Add web-scrapping functionality for ithaki communication codes / they change every 3 hours
+- FIX THE README.md FILE
 - 
