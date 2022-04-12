@@ -279,7 +279,7 @@ public class GPS {
 	/**
 	 * Methods to parse the NMEA Protocol GPS packets sent by the VirtualModem.
 	 * 
-	 * @bibliography SiRF NMEA Reference Manual: http://ithaki.eng.auth.gr/netlab/sirf-nmea-reference-manual.pdf
+	 * @see SiRF NMEA Reference Manual: http://ithaki.eng.auth.gr/netlab/sirf-nmea-reference-manual.pdf
 	 * 
 	 * @param NMEAProtocol_GPS_FullString : A NMEA GPS packet sent by the VirtuaModem. Example:
 	 *                        "$GPGGA,045208.000,4037.6331,N,02257.5633,E,1,07,1.5,57.8,M,36.1,M,,0000*6D"

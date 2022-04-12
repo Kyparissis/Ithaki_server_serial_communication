@@ -239,7 +239,6 @@ public class UserApplication {
 											  String RParameter, String FULL_TParameter){
 		try(FileWriter RequestCodes = new FileWriter(new File("output/" + "RequestCodes.txt"))){
 			RequestCodes.write("Echo request code: " + echo_request_code + "\r\n");
-			RequestCodes.write("ARQ request code: " + image_request_code_withoutErrors + "\r\n");
 			RequestCodes.write("Image request code (Tx/Rx error free): " + image_request_code_withoutErrors + "\r\n");
 			RequestCodes.write("Image request code (Tx/Rx with errors): " + image_request_code_withErrors + "\r\n");			
 			RequestCodes.write("GPS request code: " + gps_request_code + "\r\n");	
