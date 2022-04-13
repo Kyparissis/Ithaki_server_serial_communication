@@ -1,0 +1,1 @@
+BER (Bit Error Rate) Value = 6.406459762015038E-4
