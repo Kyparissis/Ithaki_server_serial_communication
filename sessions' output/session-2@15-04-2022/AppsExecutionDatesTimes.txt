@@ -1,0 +1,5 @@
+Echo application run at: 15-04-2022 00:01:20
+ARQ application run at: 15-04-2022 00:06:20
+Images application run at: 15-04-2022 00:11:20
+GPS application run at: 15-04-2022 00:11:53
+GPS-IMAGE application run at: 15-04-2022 00:11:53
