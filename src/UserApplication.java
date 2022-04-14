@@ -28,12 +28,12 @@ public class UserApplication {
 		//     SAVING Ithaki's REQUEST CODES into VARIABLES
 		// 	(from: http://ithaki.eng.auth.gr/netlab/action.php) 
 		// -----------------------------------------------------------		
-		final String echo_request_code = "E3043";					// Echo request code
-		final String image_request_code_withoutErrors = "M4745"; 	// Image request code (Tx/Rx error free)
-		final String image_request_code_withErrors = "G5103";		// Image request code (Tx/Rx with errors)
-		final String gps_request_code = "P5564"; 					// GPS request code
-		final String ack_result_code = "Q2091";						// ARQ - ACK (positive acknowledgement) result code
-		final String nack_result_code = "R2334";					// ARQ - NACK (negative acknowledgement) result code   
+		final String echo_request_code = "E4883";					// Echo request code
+		final String image_request_code_withoutErrors = "M4514"; 	// Image request code (Tx/Rx error free)
+		final String image_request_code_withErrors = "G4700";		// Image request code (Tx/Rx with errors)
+		final String gps_request_code = "P0924"; 					// GPS request code
+		final String ack_result_code = "Q6051";						// ARQ - ACK (positive acknowledgement) result code
+		final String nack_result_code = "R2597";					// ARQ - NACK (negative acknowledgement) result code   
 		
 		// -----------------------------------------------------------
 		// 		    CREATING the virtual modem && SETTINGS
@@ -125,7 +125,7 @@ public class UserApplication {
 		System.out.println();
 		DateTime[0] = LocalDateTime.now();  // Time the Echo application starts
 		//
-	    Echo.EchoApplication(IthakiModem, echo_request_code, (5 * 1), "output/Echo/");	    
+	    Echo.EchoApplication(IthakiModem, echo_request_code, (5 * 60), "output/Echo/");	    
 	    
 	    /* ---------------------------
          * |     ARQ Application     |
@@ -139,7 +139,7 @@ public class UserApplication {
 		System.out.println();
 		DateTime[1] = LocalDateTime.now();	// Time the ARQ application starts
 	    //
-	    ARQ.ARQApplication(IthakiModem, ack_result_code, nack_result_code, (5 * 1), "output/ARQ/");    
+	    ARQ.ARQApplication(IthakiModem, ack_result_code, nack_result_code, (5 * 60), "output/ARQ/");    
 	    
 	    /* ---------------------------
          * |  CAM-IMAGES Application |
