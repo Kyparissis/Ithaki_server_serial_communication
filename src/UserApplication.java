@@ -28,12 +28,12 @@ public class UserApplication {
 		//     SAVING Ithaki's REQUEST CODES into VARIABLES
 		// 	(from: http://ithaki.eng.auth.gr/netlab/action.php) 
 		// -----------------------------------------------------------		
-		final String echo_request_code = "E4883";					// Echo request code
-		final String image_request_code_withoutErrors = "M4514"; 	// Image request code (Tx/Rx error free)
-		final String image_request_code_withErrors = "G4700";		// Image request code (Tx/Rx with errors)
-		final String gps_request_code = "P0924"; 					// GPS request code
-		final String ack_result_code = "Q6051";						// ARQ - ACK (positive acknowledgement) result code
-		final String nack_result_code = "R2597";					// ARQ - NACK (negative acknowledgement) result code   
+		final String echo_request_code = "E????";					// Echo request code
+		final String image_request_code_withoutErrors = "M????"; 	// Image request code (Tx/Rx error free)
+		final String image_request_code_withErrors = "G????";		// Image request code (Tx/Rx with errors)
+		final String gps_request_code = "P????"; 					// GPS request code
+		final String ack_result_code = "Q????";						// ARQ - ACK (positive acknowledgement) result code
+		final String nack_result_code = "R????";					// ARQ - NACK (negative acknowledgement) result code   
 		
 		// -----------------------------------------------------------
 		// 		    CREATING the virtual modem && SETTINGS
