@@ -6,8 +6,8 @@
 Department of Electrical and Computer Engineering @ Aristotle University of Thessaloniki   
 *(Spring Semester 2021-2022)*
 >> **Assignment Instructions** can be found [**HERE**](https://github.com/Kyparissis/Networks1-2022-Assignment/blob/main/Assignment-Instructions.pdf) *(Greek)*.  
->>> My **submitted REPORTS' folder** can be found [**HERE**](https://github.com/Kyparissis/Networks1-2022-Assignment/blob/main/Assignment-Instructions.pdf).   
-The **Java Project folder** can be found [**HERE**](https://github.com/Kyparissis/Networks1-2022-Assignment/blob/main/src/). 
+>>> My **submitted REPORTS' folder** can be found [**HERE**](https://github.com/Kyparissis/Networks1-2022-Assignment/tree/main/reports).   
+The **Java Project folder** can be found [**HERE**](https://github.com/Kyparissis/Networks1-2022-Assignment/blob/main/src). 
 
 This Network Programming Assignment aims at:
 - Developing an experimental network application using Java.
@@ -26,10 +26,10 @@ This Network Programming Assignment aims at:
 ---
 
 ## How to use
-This project's code is an Eclipse IDE project... (TODO: ADD MORE STUFF HERE)
+This project's code is an Eclipse IDE project...
 
 ---
 ---
 ## TO DO:
-- FIX THE README.md FILE
-- 
+- MAKE A BETTER README.md FILE
+- FIX THE "How to use" SECTION
