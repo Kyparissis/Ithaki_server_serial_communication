@@ -1,9 +1,10 @@
-# Computer Networks I - ASSIGNMENT
+# Computer Networks 1 - ASSIGNMENT
 
 ## JAVA SERIAL COMMUNICATIONS PROGRAMMING
 
-> Assignment of the **Computer Networks I** Course  
-Department of Electrical and Computer Engineering @ Aristotle University of Thessaloniki   
+> School of Engineering   
+Department of Electrical and Computer Engineering   
+Aristotle University of Thessaloniki      
 *{Spring Semester 2021-2022}* 
 
 This Network Programming Assignment aims at:
