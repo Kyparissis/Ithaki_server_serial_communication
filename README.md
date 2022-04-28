@@ -2,8 +2,7 @@
 
 ## JAVA SERIAL COMMUNICATIONS PROGRAMMING
 
-> School of Engineering   
-Department of Electrical and Computer Engineering   
+> School of Engineering - Department of Electrical and Computer Engineering   
 Aristotle University of Thessaloniki      
 *{Spring Semester 2021-2022}* 
 
@@ -55,3 +54,4 @@ Fially we create a histogram, using Excel, to find the probability distribution 
 ## TO DO:
 - ADD INSTRUCTION ON HOW TO USE THE SOURCE CODE OF THIS PROJECT
 - MAKE A BETTER README.md
+- ...
