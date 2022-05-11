@@ -12,8 +12,7 @@ import java.time.format.DateTimeFormatter; // Import the DateTimeFormatter class
 
 /**
  * @apiNote	This is a SCRIPT that runs the applications needed to "communicate" receive/generate
- * output requested from the assignment instructions (Assignment-Instructions.pdf) .
- * 
+ * output requested from the assignment instructions (Assignment-Instructions.pdf).
  * (From each session, we keep/save the output folder)
  */
 public class UserApplication {
