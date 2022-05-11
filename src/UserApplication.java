@@ -156,14 +156,10 @@ public class UserApplication {
 		// camera is used
 		// When "CAM=PTZ" accompanies the image_request_code, the moveable (using a
 		// servo moter) camera is used
-		Image.generateImage(Image.receiveImageBytes(IthakiModem, image_request_code_withoutErrors + "CAM=FIX"),
-				"output/images/error-free/image_errorFree_FIX.jpg");
-		Image.generateImage(Image.receiveImageBytes(IthakiModem, image_request_code_withoutErrors + "CAM=PTZ"),
-				"output/images/error-free/image_errorFree_PTZ.jpg");
-		Image.generateImage(Image.receiveImageBytes(IthakiModem, image_request_code_withErrors + "CAM=FIX"),
-				"output/images/with-errors/image_withErrors_FIX.jpg");
-		Image.generateImage(Image.receiveImageBytes(IthakiModem, image_request_code_withErrors + "CAM=PTZ"),
-				"output/images/with-errors/image_withErrors_PTZ.jpg");
+		Image.generateImage(Image.receiveImageBytes(IthakiModem, image_request_code_withoutErrors + "CAM=FIX"), "output/images/error-free/image_errorFree_FIX.jpg");
+		Image.generateImage(Image.receiveImageBytes(IthakiModem, image_request_code_withoutErrors + "CAM=PTZ"), "output/images/error-free/image_errorFree_PTZ.jpg");
+		Image.generateImage(Image.receiveImageBytes(IthakiModem, image_request_code_withErrors + "CAM=FIX"), "output/images/with-errors/image_withErrors_FIX.jpg");
+		Image.generateImage(Image.receiveImageBytes(IthakiModem, image_request_code_withErrors + "CAM=PTZ"), "output/images/with-errors/image_withErrors_PTZ.jpg");
 
 		/*
 		 * --------------------------- | GPS Application | ---------------------------
@@ -180,12 +176,11 @@ public class UserApplication {
 		// LL GPS packets from
 		// the pre-saved route Χ, starting with the packet PPPP.
 		// HERE: Route -> X = 1
-		// Starting packet -> PPPP = 0280 (Random packet number we chose)
-		// Number of packets -> LL = 99 (MAX)
+		//		 Starting packet -> PPPP = 0280 (Random packet number we chose)
+		//		 Number of packets -> LL = 99 (MAX)
 		String RParameter = "R=1028099";
 		String FULL_TParameter = GPS.GPSApplication(IthakiModem, gps_request_code + RParameter);
-		// Returns the: FULL_TParameter = "T=AABBCCDDEEFF" (Longtitude: AA BB' CC'' and
-		// Latitude: DD EE' FF'')
+		// Returns the: FULL_TParameter = "T=AABBCCDDEEFF" (Longtitude: AA BB' CC'' and Latitude: DD EE' FF'')
 		//
 		// Generate an image taken, from Google Maps at the cordinates with Longtitude:
 		// AA BB' CC'' and Latitude: DD EE' FF'', by Ithaki
@@ -193,8 +188,7 @@ public class UserApplication {
 		System.out.println(".");
 		System.out.print(".");
 		DateTime[4] = LocalDateTime.now(); // Time the GPS-IMAGE application starts
-		Image.generateImage(Image.receiveImageBytes(IthakiModem, gps_request_code + FULL_TParameter),
-				"output/images/GPS/GPS_Image_GoogleMaps.jpg");
+		Image.generateImage(Image.receiveImageBytes(IthakiModem, gps_request_code + FULL_TParameter), "output/images/GPS/GPS_Image_GoogleMaps.jpg");
 		// -----------------------------------------------------------
 
 		// ==================================
