@@ -29,12 +29,12 @@ public class UserApplication {
 		// SAVING Ithaki's REQUEST CODES into VARIABLES
 		// (from: http://ithaki.eng.auth.gr/netlab/action.php)
 		// -----------------------------------------------------------
-		final String echo_request_code = "E8601"; 					// Echo request code
-		final String image_request_code_withoutErrors = "M9927"; 	// Image request code (Tx/Rx error free)
-		final String image_request_code_withErrors = "G1804"; 		// Image request code (Tx/Rx with errors)
-		final String gps_request_code = "P7094"; 					// GPS request code
-		final String ack_result_code = "Q6814"; 					// ARQ - ACK (positive acknowledgement) result code
-		final String nack_result_code = "R4005"; 					// ARQ - NACK (negative acknowledgement) result code
+		final String echo_request_code = "E????"; 					// Echo request code
+		final String image_request_code_withoutErrors = "M????"; 	// Image request code (Tx/Rx error free)
+		final String image_request_code_withErrors = "G????"; 		// Image request code (Tx/Rx with errors)
+		final String gps_request_code = "P????"; 					// GPS request code
+		final String ack_result_code = "Q????"; 					// ARQ - ACK (positive acknowledgement) result code
+		final String nack_result_code = "R????"; 					// ARQ - NACK (negative acknowledgement) result code
 
 		// -------------------------------------------
 		// CREATING the virtual modem && SETTINGS
@@ -243,6 +243,7 @@ public class UserApplication {
 	private static void saveRequestCodes2FILE(String echo_request_code, String image_request_code_withoutErrors,
 			String image_request_code_withErrors, String gps_request_code, String ack_result_code,
 			String nack_result_code, String RParameter, String FULL_TParameter) {
+		
 		try (FileWriter RequestCodes = new FileWriter(new File("output/" + "RequestCodes.txt"))) {
 			RequestCodes.write("Echo request code: " + echo_request_code + "\r\n");
 			RequestCodes.write("Image request code (Tx/Rx error free): " + image_request_code_withoutErrors + "\r\n");
@@ -270,11 +271,9 @@ public class UserApplication {
 
 			AppsExecutionDatesTimes.write("Echo application run at: " + DatesTimes[0].format(DateTimeFORMAT) + "\r\n");
 			AppsExecutionDatesTimes.write("ARQ application run at: " + DatesTimes[1].format(DateTimeFORMAT) + "\r\n");
-			AppsExecutionDatesTimes
-					.write("Images application run at: " + DatesTimes[2].format(DateTimeFORMAT) + "\r\n");
+			AppsExecutionDatesTimes.write("Images application run at: " + DatesTimes[2].format(DateTimeFORMAT) + "\r\n");
 			AppsExecutionDatesTimes.write("GPS application run at: " + DatesTimes[3].format(DateTimeFORMAT) + "\r\n");
-			AppsExecutionDatesTimes
-					.write("GPS-IMAGE application run at: " + DatesTimes[3].format(DateTimeFORMAT) + "\r\n");
+			AppsExecutionDatesTimes.write("GPS-IMAGE application run at: " + DatesTimes[3].format(DateTimeFORMAT) + "\r\n");
 
 		} catch (Exception x) {
 			System.out.println(
