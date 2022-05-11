@@ -2,9 +2,9 @@ import applications.*;
 
 import ithakimodem.*;
 
-//---------------------------------
-//			LIBRARIES
-//---------------------------------	
+//---------------
+//   LIBRARIES
+//---------------	
 import java.io.File;
 import java.io.FileWriter;
 import java.time.LocalDateTime; // Import the LocalDateTime class
