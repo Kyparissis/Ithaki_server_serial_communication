@@ -44,7 +44,7 @@ Fially we create a histogram, using Excel, to find the probability distribution 
 ---
 
 ## Reports
-The sumbitted reports are not uploaded for security reasons!   
+The full sumbitted reports are not uploaded!   
 However, the media used in them can be found here [**HERE**](https://github.com/Kyparissis/Networks1-2022-Assignment/tree/main/reports/media).
 
 ---
