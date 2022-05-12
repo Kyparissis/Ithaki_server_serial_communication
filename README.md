@@ -3,7 +3,7 @@
 ## JAVA SERIAL COMMUNICATIONS PROGRAMMING
 
 > School of Engineering - Department of Electrical and Computer Engineering   
-Aristotle University of Thessaloniki      
+Aristotle University of Thessaloniki    
 *( Spring Semester 2021-2022 )* 
 
 ---
@@ -43,8 +43,7 @@ Fially we create a histogram, using Excel, to find the probability distribution 
 
 
 ## Reports
-*The full sumbitted reports are not uploaded!   
-However, the media used in them can be found here [**HERE**](https://github.com/Kyparissis/Networks1-2022-Assignment/tree/main/reports/media).*
+*The media used in the sumbitted reports can be found here [**HERE**](https://github.com/Kyparissis/Networks1-2022-Assignment/tree/main/reports/media).*
 
 ---
 
