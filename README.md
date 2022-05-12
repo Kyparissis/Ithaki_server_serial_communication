@@ -6,14 +6,15 @@
 Aristotle University of Thessaloniki      
 *{Spring Semester 2021-2022}* 
 
+---
+>> **Assignment Instructions** can be found [**HERE**](https://github.com/Kyparissis/Networks1-2022-Assignment/blob/main/Assignment-Instructions.pdf) *(Greek)*. 
+---
+
 This Network Programming Assignment aims at:
 - Developing an experimental network application using Java.
 - Learning about the mechanisms of the asynchronous serial communications in practice.
 - Collecting statistical measurement values of some parametres that contribute, simultaneously with other, at the configuration of the communication quality on real-life computer communication channels.    
 
-
----
->> **Assignment Instructions** can be found [**HERE**](https://github.com/Kyparissis/Networks1-2022-Assignment/blob/main/Assignment-Instructions.pdf) *(Greek)*. 
 
 For this assignment we used the virtual modem [Ithaki-Smart-Modem](https://github.com/Kyparissis/Networks1-2022-Assignment/blob/main/lib/ithakimodem.jar) to communicate with the virtual lab of this course.    
 The object class ```Modem.class```  provided by Ithaki's web server allows the serial communication of a PC with a local virtual modem and through that the communication with Ithaki's server using a typical Internet connection (Not a dialup DSL connection).   
