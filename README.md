@@ -54,6 +54,7 @@ However, the media used in them can be found here [**HERE**](https://github.com/
 
 ---
 ---
+---
 ## TO DO:
 - ADD INSTRUCTION ON HOW TO USE THE SOURCE CODE OF THIS PROJECT - ADD A Makefile
 - MAKE A BETTER README.md
