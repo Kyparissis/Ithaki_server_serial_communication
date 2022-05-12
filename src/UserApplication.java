@@ -270,8 +270,7 @@ public class UserApplication {
 			AppsExecutionDatesTimes.write("GPS-IMAGE application run at: " + DatesTimes[3].format(DateTimeFORMAT) + "\r\n");
 
 		} catch (Exception x) {
-			System.out.println(
-					"Caught EXCEPTION: " + x + " ! Couldn't create files: output/AppsExecutionDatesTimes.txt .");
+			System.out.println("Caught EXCEPTION: " + x + " ! Couldn't create files: output/AppsExecutionDatesTimes.txt .");
 			System.out.println("Applications' execution times are not saved into a file!");
 		}
 	}
