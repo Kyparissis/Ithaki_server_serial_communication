@@ -22,11 +22,11 @@ The object class ```Modem.class```  provided by Ithaki's web server allows the s
 We create this modem in our Java source code to work with it using the line:   
 ```Modem modem = new Modem();```       
 Then we:
-- Use the ```echo_request_code``` code to receive Echo type packets for at least 4 minutes, parses them and then calculates the system's response time.   
+- Use the ```echo_request_code``` code to receive Echo type packets for at least 4 minutes, parse them and then calculate the system's response time.   
 Then we create a scatter chart, using Excel, to analyse our system.
 - Use the two ```image_request_code``` codes to receive images taken by the virtual lab's `VideoCoder` (One code gives an ERROR FREE image, the other one gives an image WITH-ERRORS).
-- Use the two ```gps_request_code``` codes to receive [NMEA Protocol](http://www.nmea.org/) GPS points' packets from a pre-saved route, parses those point's packets AND then requests an image/screenshot from Google Maps pin-pointing 5 points with distance of at least 4'' between the one to the next one.
-- Use the two ```ack_result_code``` and ```nack_result_code``` codes code to receive ARQ type packets for at least 4 minutes, parses them and then uses an ARQ - Stop and Wait algorithm to check for errors and either re-requests the same packet or requests a new one. Then, also, calculates the system's response time.   
+- Use the two ```gps_request_code``` codes to receive [NMEA Protocol](http://www.nmea.org/) GPS points' packets from a pre-saved route, parse those point's packets AND then request an image/screenshot from Google Maps pin-pointing 5 points with distance of at least 4'' between the one to the next one.
+- Use the two ```ack_result_code``` and ```nack_result_code``` codes code to receive ARQ type packets for at least 4 minutes, parse them and then uses an ARQ - Stop and Wait algorithm to check for errors and either re-requests the same packet or requests a new one. Then, also, calculate the system's response time.   
 Then we create a scatter chart, using Excel, to analyse our system.   
 Fially we create a histogram, using Excel, to find the probability distribution of the number of re-requests per packet, due to errors.
 - ...
@@ -50,11 +50,11 @@ However, the media used in them can be found here [**HERE**](https://github.com/
 ---
 
 ## How to use
-...
+
 
 ---
 ---
 ## TO DO:
-- ADD INSTRUCTION ON HOW TO USE THE SOURCE CODE OF THIS PROJECT
+- ADD INSTRUCTION ON HOW TO USE THE SOURCE CODE OF THIS PROJECT - ADD A Makefile
 - MAKE A BETTER README.md
 - ...
