@@ -31,7 +31,7 @@ Then we create a scatter chart, using Excel, to analyse our system.
 Fially we create a histogram, using Excel, to find the probability distribution of the number of re-requests per packet, due to errors.
 - ...
 
->> The **SOURCE CODE Project folder** can be found [**HERE**](https://github.com/Kyparissis/Networks1-2022-Assignment/blob/main/Assignment-Instructions.pdf).
+>> The **Java SOURCE CODE Project folder** can be found [**HERE**](https://github.com/Kyparissis/Networks1-2022-Assignment/blob/main/Assignment-Instructions.pdf).
 
 ---
 ## Output
@@ -41,7 +41,6 @@ Fially we create a histogram, using Excel, to find the probability distribution 
 ### Session 2
 [**HERE**](https://github.com/Kyparissis/Networks1-2022-Assignment/tree/main/sessions-output/session-2%4015-04-2022).
 
----
 
 ## Reports
 *The full sumbitted reports are not uploaded!   
