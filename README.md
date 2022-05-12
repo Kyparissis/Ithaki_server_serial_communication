@@ -4,10 +4,10 @@
 
 > School of Engineering - Department of Electrical and Computer Engineering   
 Aristotle University of Thessaloniki      
-*{Spring Semester 2021-2022}* 
+*( Spring Semester 2021-2022 )* 
 
 ---
->> **Assignment Instructions** can be found [**HERE**](https://github.com/Kyparissis/Networks1-2022-Assignment/blob/main/Assignment-Instructions.pdf) *(Greek)*. 
+>> **Assignment's Instructions** can be found [**HERE**](https://github.com/Kyparissis/Networks1-2022-Assignment/blob/main/Assignment-Instructions.pdf) *(Greek)*. 
 ---
 
 This Network Programming Assignment aims at:
@@ -44,7 +44,8 @@ Fially we create a histogram, using Excel, to find the probability distribution 
 ---
 
 ## Reports
-...
+The sumbitted reports are not uploaded for security reasons!   
+However, the media used in them can be found here [**HERE**](https://github.com/Kyparissis/Networks1-2022-Assignment/tree/main/reports/media).
 
 ---
 
