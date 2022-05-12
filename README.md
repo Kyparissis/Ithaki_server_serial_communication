@@ -50,7 +50,9 @@ However, the media used in them can be found here [**HERE**](https://github.com/
 ---
 
 ## How to use
-
+```shell
+...
+```
 
 ---
 ---
