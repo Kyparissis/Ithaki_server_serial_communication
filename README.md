@@ -44,13 +44,13 @@ Fially we create a histogram, using Excel, to find the probability distribution 
 
 
 ## Reports
-*The media used in the sumbitted reports can be found here [**HERE**](https://github.com/Kyparissis/Networks1-2022-Assignment/tree/main/reports/media).*
+*( The media used in the sumbitted reports can be found here [**HERE**](https://github.com/Kyparissis/Networks1-2022-Assignment/tree/main/reports/media). )*
 
 ---
 
 ## How to use
 ```shell
-...
+
 ```
 
 ---
