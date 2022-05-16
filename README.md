@@ -30,7 +30,8 @@ Then we create a scatter chart, using MS Excel, to analyse our system.
 Then we create a scatter chart, using MS Excel, to analyse our system.   
 Finally we create a histogram, using MS Excel, to find the probability distribution of the number of re-requests per packet, due to errors.   
 
-*( Those request codes are provided by Ithaki's webserver and are valid for a 2-hour session. )*   
+*( Those request codes are provided by [Ithaki's webserver](http://ithaki.eng.auth.gr/netlab/index.html) and are valid for a 2-hour session. )*    
+...
 >> The **Java SOURCE CODE Project folder** can be found [**HERE**](https://github.com/Kyparissis/Networks1-2022-Assignment/blob/main/Assignment-Instructions.pdf).
 
 ---
