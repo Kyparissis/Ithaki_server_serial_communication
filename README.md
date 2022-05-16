@@ -1,10 +1,11 @@
 # Computer Networks 1 - ASSIGNMENT
 
 ## JAVA SERIAL COMMUNICATIONS PROGRAMMING
- 
-> [Department of Electrical and Computer Engineering](http://ee.auth.gr/)   
-[Aristotle University of Thessaloniki (AUTh)](https://www.auth.gr/)
->>  Spring Semester 2021-2022  
+   
+> [**Department of Electrical and Computer Engineering**](http://ee.auth.gr/)   
+[*Aristotle University of Thessaloniki*](https://www.auth.gr/)   
+> <img src="https://www.auth.gr/wp-content/uploads/LogoAUTHwhite300ppi.png" alt="LogoAUTHwhite300ppi" style="height:100px; width:100px;"/> 
+>>>  Spring Semester 2021-2022  
 
 ---
 >> **Assignment's Instructions** can be found [**HERE**](https://github.com/Kyparissis/Networks1-2022-Assignment/blob/main/Assignment-Instructions.pdf) *(Greek)*. 
