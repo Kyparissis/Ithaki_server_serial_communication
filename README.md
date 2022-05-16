@@ -20,6 +20,7 @@ This Network Programming Assignment aims at:
 For this assignment we used the virtual modem [Ithaki-Smart-Modem](https://github.com/Kyparissis/Networks1-2022-Assignment/blob/main/lib/ithakimodem.jar) to communicate with the virtual lab of this course.    
 The object class ```Modem.class```  provided by Ithaki's web server allows the serial communication of a PC with a local virtual modem and through that the communication with Ithaki's server using a typical Internet connection (Not a dialup DSL connection).   
  
+(...)   
 We create this modem, in our Java code, using the `Modem.class` 's:   
 ```Modem VirtualModem = new Modem();```       
 Then we:
@@ -32,7 +33,7 @@ Then we create a scatter chart, using MS Excel, to analyse our system.
 Finally we create a histogram, using MS Excel, to find the probability distribution of the number of re-requests per packet, due to errors.   
 
 *( Those request codes are provided by [Ithaki's webserver](http://ithaki.eng.auth.gr/netlab/index.html) and are valid for a 2-hour session. )*    
-...
+(...)
 >> The **Java SOURCE CODE Project folder** can be found [**HERE**](https://github.com/Kyparissis/Networks1-2022-Assignment/blob/main/Assignment-Instructions.pdf).
 
 ---
@@ -52,16 +53,10 @@ Finally we create a histogram, using MS Excel, to find the probability distribut
 ## How to use   
 *This project was created using the [**Eclipse IDE for Java Developers**](https://www.eclipse.org/downloads/packages/release/kepler/sr1/eclipse-ide-java-developers).*   
 However, you can run/use this code on your terminal using the following steps:   
-...
+(...)
 ```shell
 
 ```   
-...
+(...)
 
 ---
----
----
-## TO DO:
-- ADD INSTRUCTION ON HOW TO USE THE SOURCE CODE OF THIS PROJECT
-- MAKE A BETTER README
-- ...
