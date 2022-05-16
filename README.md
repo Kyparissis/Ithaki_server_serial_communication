@@ -60,6 +60,6 @@ However, you can run/use this code on your terminal using the following steps:
 ---
 ---
 ## TO DO:
-- ADD INSTRUCTION ON HOW TO USE THE SOURCE CODE OF THIS PROJECT - ADD A Makefile
+- ADD INSTRUCTION ON HOW TO USE THE SOURCE CODE OF THIS PROJECT
 - MAKE A BETTER README
 - ...
