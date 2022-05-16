@@ -19,7 +19,7 @@ This Network Programming Assignment aims at:
 For this assignment we used the virtual modem [Ithaki-Smart-Modem](https://github.com/Kyparissis/Networks1-2022-Assignment/blob/main/lib/ithakimodem.jar) to communicate with the virtual lab of this course.    
 The object class ```Modem.class```  provided by Ithaki's web server allows the serial communication of a PC with a local virtual modem and through that the communication with Ithaki's server using a typical Internet connection (Not a dialup DSL connection).   
  
-We create this modem,, in our Java code, to work with using the `Modem.class` 's:   
+We create this modem, in our Java code, using the `Modem.class` 's:   
 ```Modem VirtualModem = new Modem();```       
 Then we:
 - Use the ```echo_request_code``` code to receive Echo type packets for at least 4 minutes, parse them and then calculate the system's response time.   
