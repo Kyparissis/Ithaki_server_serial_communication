@@ -54,7 +54,7 @@ Finally we create a histogram, using MS Excel, to find the probability distribut
 ---
 
 ## How to use   
-*This project was created using the [**Eclipse IDE for Java Developers**](https://www.eclipse.org/downloads/packages/release/kepler/sr1/eclipse-ide-java-developers).*   
+*This project has been developed and tested using the [**Eclipse IDE for Java Developers**](https://www.eclipse.org/downloads/packages/release/kepler/sr1/eclipse-ide-java-developers).*   
 However, you can run/use this code on your terminal using the following steps:   
 (...)
 ```shell
