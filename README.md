@@ -2,9 +2,10 @@
 
 ## JAVA SERIAL COMMUNICATIONS PROGRAMMING
    
-> [**Department of Electrical and Computer Engineering**](http://ee.auth.gr/)   
+> <img src="https://www.auth.gr/wp-content/uploads/LogoAUTHwhite300ppi.png" alt="LogoAUTHwhite300ppi" style="height:100px; width:100px;" align="right">  
+> 
+> [**Department of Electrical and Computer Engineering**](http://ee.auth.gr/),   
 [*Aristotle University of Thessaloniki*](https://www.auth.gr/)   
-> <img src="https://www.auth.gr/wp-content/uploads/LogoAUTHwhite300ppi.png" alt="LogoAUTHwhite300ppi" style="height:100px; width:100px;"/> 
 >>>  Spring Semester 2021-2022  
 
 ---
@@ -37,6 +38,7 @@ Finally we create a histogram, using MS Excel, to find the probability distribut
    
 (...)   
    
+---
 >> The **Java SOURCE CODE Project folder** can be found [**HERE**](https://github.com/Kyparissis/Networks1-2022-Assignment/blob/main/Assignment-Instructions.pdf).
 
 ---
@@ -56,10 +58,19 @@ Finally we create a histogram, using MS Excel, to find the probability distribut
 ## How to use   
 *This project has been developed and tested using the [**Eclipse IDE for Java Developers**](https://www.eclipse.org/downloads/packages/release/kepler/sr1/eclipse-ide-java-developers).*   
 However, you can run/use this code on your terminal using the following steps:   
-(...)
+- First of all, clone this repo:
 ```shell
+git clone https://github.com/Kyparissis/Networks1-2022-Assignment.git
+```  
+- (...)
+```shell
+cd Networks1-2022-Assignment/
 
-```   
+
+
+
+
+```  
 (...)
 
 ---
