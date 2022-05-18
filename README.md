@@ -28,7 +28,8 @@ In the `UserApplication.java`:
 - Set the Virtual Modem's **SPEED** and **TIMEOUT**.   
 - Dial-up Ithaki using the code: `"ATD2310ITHAKI"`, since the modem is now in *COMMAND MODE*   
 (This also sets the modem into *DATA MODE*, allowing us to use every type of command)   
-- Test the connection to the modem by typing `"TEST"` and expect this output: `PSTART DD-MM-YYYY HH:MM:SS ITHAKI JAVA LAB SERVER TEST PSTOP`, where ***DD-MM-YYYY*** is the date and ***HH-MM-SS*** the time the test packet was sent from the server.
+- Test the connection to the modem by typing `"TEST"` and expect this output: `PSTART DD-MM-YYYY HH:MM:SS ITHAKI JAVA LAB SERVER TEST PSTOP`   
+, where ***DD-MM-YYYY*** is the date and ***HH-MM-SS*** the time the test packet was sent from the server.
 - Then, as asked, we:
    - Use the ```echo_request_code``` code to receive Echo type packets for at least 4 minutes, parse them and then calculate the system's response time.   
 Then we create a scatter chart, using MS Excel, to analyse our system.   
@@ -43,8 +44,8 @@ Then we request an image/screenshot from [Google Maps](https://www.google.com/ma
 Then, also, calculate the system's response time.   
 Then we create a scatter chart, using MS Excel, to analyse our system.   
 Also then we create a histogram, using MS Excel, to find the probability distribution of the number of re-requests per packet, due to errors.   
-ARQ type packets have the following format: `PSTART DD-MM-YYYY HH-MM-SS PC <ΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧ> FCS PSTOP` ,   
-where ***DD-MM-YYYY*** is the date and ***HH-MM-SS*** the time the packet was sent from the server, ***PC*** a packet counter%100, *ΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧ* is the pseudoencrypted message/string and *FCS* the FCS' Decimal Value.   
+ARQ type packets have the following format: `PSTART DD-MM-YYYY HH-MM-SS PC <ΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧ> FCS PSTOP`   
+,where ***DD-MM-YYYY*** is the date and ***HH-MM-SS*** the time the packet was sent from the server, ***PC*** a packet counter%100, *ΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧ* is the pseudoencrypted message/string and *FCS* the FCS' Decimal Value.   
 Finally, we find the ***Bit Error Rate (BER)*** of the ARQ type packets we received during this time.   
    
 - At last, we save/store the request codes we used, the time we executed each application and the full console output into *.txt* files.   
