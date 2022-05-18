@@ -23,7 +23,7 @@ The object class ```Modem.class```  provided by Ithaki's web server allows the s
  
 (...)   
    
-We create this modem, in our Java code, using the `Modem.class` 's:   
+We create this modem object using the `ithakimodem.jar`'s `Modem.class`:   
 ```Modem VirtualModem = new Modem();```       
 Then we:
 - Use the ```echo_request_code``` code to receive Echo type packets for at least 4 minutes, parse them and then calculate the system's response time.   
@@ -57,9 +57,8 @@ Finally we create a histogram, using MS Excel, to find the probability distribut
 ## Reports
 *( The media used in the sumbitted reports can be found here [**HERE**](https://github.com/Kyparissis/Networks1-2022-Assignment/tree/main/reports/media). )*
 
----
 
-## How to use   
+## Installation / How to use   
 *This project has been developed and tested using the [**Eclipse IDE for Java Developers**](https://www.eclipse.org/downloads/packages/release/kepler/sr1/eclipse-ide-java-developers).*   
 However, you can run/use this code on your terminal using the following steps:   
 - First of all, clone this repo:
@@ -76,5 +75,3 @@ cd Networks1-2022-Assignment/
 
 ```  
 (...)
-
----
