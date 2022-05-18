@@ -54,7 +54,7 @@ Finally, we find the ***Bit Error Rate (BER)*** of the ARQ type packets we recei
 
 ---
 ## Output
-*After each session, we copied the `output` folder, where the code's output is stored, into the `sessions-output` folder and renamed it.*   
+*After each session, we store the `output` folder, where the code's output is stored, into the `sessions-output` folder.*   
 *( Session interval needed to be <body>&#8805;</body> 48-Hours)*     
 ### Session #1
 *(Date: 12/04/2022)*   
@@ -70,6 +70,7 @@ Finally, we find the ***Bit Error Rate (BER)*** of the ARQ type packets we recei
 
 ## Installation / How to use   
 *This project has been developed and tested using the [**Eclipse IDE for Java Developers**](https://www.eclipse.org/downloads/packages/release/kepler/sr1/eclipse-ide-java-developers).*   
+   
 However, you can run/use this code on your terminal using the following steps:   
 - First of all, clone this repo:
 ```shell
