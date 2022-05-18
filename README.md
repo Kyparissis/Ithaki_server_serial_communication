@@ -44,10 +44,14 @@ Finally we create a histogram, using MS Excel, to find the probability distribut
 ---
 ## Output
 
-### Session 1
+### Session #1
+(*Date: 12/04/2022*)   
 [**HERE**](https://github.com/Kyparissis/Networks1-2022-Assignment/tree/main/sessions-output/session-1%4012-04-2022).
-### Session 2
-[**HERE**](https://github.com/Kyparissis/Networks1-2022-Assignment/tree/main/sessions-output/session-2%4015-04-2022).
+### Session #2
+(*Date: 15/04/2022*)   
+[**HERE**](https://github.com/Kyparissis/Networks1-2022-Assignment/tree/main/sessions-output/session-2%4015-04-2022).    
+
+*( Session interval needed to be <body>&#8805;</body> 48-Hours)*     
 
 
 ## Reports
