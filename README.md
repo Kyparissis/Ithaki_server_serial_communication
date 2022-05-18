@@ -30,7 +30,7 @@ Then we:
 Then we create a scatter chart, using MS Excel, to analyse our system.
 - Use the two ```image_request_code``` codes to receive images taken by the virtual lab's `VideoCoder` (Hosted at http://ithaki.eng.auth.gr/netlab/video.html) (One code gives an ERROR FREE image, the other one gives an image WITH-ERRORS).
 - Use the ```gps_request_code``` code to receive [NMEA Protocol](http://www.nmea.org/)-( Global Positioning System Fix Data, *$GPGGA* ) GPS points' packets from a pre-saved route, parse those point's packets AND then request an image/screenshot from Google Maps pin-pointing 5 points with distance of at least 4'' between the one to the next one.
-- Use the two ```ack_result_code``` and ```nack_result_code``` codes code to receive ARQ type packets for at least 4 minutes, parse them and then uses an ARQ - Stop and Wait algorithm to check for errors and either re-requests the same packet or requests a new one. Then, also, calculate the system's response time.   
+- Use the two ```ack_result_code``` and ```nack_result_code``` codes to receive ARQ type packets for at least 4 minutes, parse them and then uses an ARQ - Stop and Wait algorithm to check for errors and either re-requests the same packet or requests a new one. Then, also, calculate the system's response time.   
 Then we create a scatter chart, using MS Excel, to analyse our system.   
 Finally we create a histogram, using MS Excel, to find the probability distribution of the number of re-requests per packet, due to errors.   
 
@@ -43,15 +43,14 @@ Finally we create a histogram, using MS Excel, to find the probability distribut
 
 ---
 ## Output
-*After each session, we copied the `output` folder, where the code's output is stored, into the `sessions-output` folder and renamed it.*
+*After each session, we copied the `output` folder, where the code's output is stored, into the `sessions-output` folder and renamed it.*   
+*( Session interval needed to be <body>&#8805;</body> 48-Hours)*     
 ### Session #1
 *(Date: 12/04/2022)*   
 [**HERE**](https://github.com/Kyparissis/Networks1-2022-Assignment/tree/main/sessions-output/session-1%4012-04-2022).
 ### Session #2
 *(Date: 15/04/2022)*   
 [**HERE**](https://github.com/Kyparissis/Networks1-2022-Assignment/tree/main/sessions-output/session-2%4015-04-2022).    
-
-*( Session interval needed to be <body>&#8805;</body> 48-Hours)*     
 
 
 ## Reports
