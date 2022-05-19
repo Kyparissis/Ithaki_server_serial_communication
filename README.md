@@ -17,8 +17,9 @@ This Network Programming Assignment aims at:
 - Learning about the mechanisms of the asynchronous serial communications in practice.
 - Collecting statistical measurement values of some parametres that contribute, simultaneously with other, at the configuration of the communication quality on real-life computer communication channels.    
 
+---
 
-For this assignment we used the virtual modem [Ithaki-Smart-Modem](https://github.com/Kyparissis/Networks1-2022-Assignment/blob/main/lib/ithakimodem.jar) to communicate with the virtual lab of this course.    
+For this assignment we used the virtual modem [Ithaki-Smart-Modem](https://github.com/Kyparissis/Networks1-2022-Assignment/blob/main/lib/ithakimodem.jar)  (`ithakimodem.jar`) to communicate with the virtual lab of this course.    
 The object class ```Modem.class```  provided by Ithaki's web server allows the serial communication of a PC with a local virtual modem and through that the communication with Ithaki's server using a typical Internet connection (Not a dialup DSL connection).   
       
        
@@ -26,40 +27,40 @@ In the `UserApplication.java`:
 - We create this modem object using the `ithakimodem.jar`'s `Modem.class`:   
 ```Modem VirtualModem = new Modem();```     
 - Set the Virtual Modem's **SPEED** and **TIMEOUT**.   
-- Dial-up Ithaki using the code: `"ATD2310ITHAKI"`, since the modem is now in *COMMAND MODE*   
+- Dial-up Ithaki using the code: `"ATD2310ITHAKI"`(since the modem is now in *COMMAND MODE*)   
 (This also sets the modem into *DATA MODE*, allowing us to use every type of command)   
 - Test the connection to the modem by typing `"TEST"` and expect this output:   
 `PSTART DD-MM-YYYY HH:MM:SS ITHAKI JAVA LAB SERVER TEST PSTOP`   
-, where ***DD-MM-YYYY*** is the date and ***HH-MM-SS*** the time the test packet was sent from the server.  
+, where ***DD-MM-YYYY*** is the date, ***HH-MM-SS*** the time the test packet was sent from the server.  
 
 - Then, as asked, we:
-   - Use the ```echo_request_code``` code to receive Echo type packets for at least 4 minutes, parse them and then calculate the system's response time.   
+   - Use the ```echo_request_code``` code, in the `EchoApplication()` to receive Echo type packets for at least 4 minutes, parse them and then calculate the system's response time.   
 Then we create a scatter chart, using MS Excel, to analyse our system.   
 Echo type packets have the following format: `PSTART DD-MM-YYYY HH-MM-SS PC PSTOP` ,   
-where ***DD-MM-YYYY*** is the date and ***HH-MM-SS*** the time the packet was sent from the server and ***PC*** a packet counter%100.   
-Example:   
+where ***DD-MM-YYYY*** is the date, ***HH-MM-SS*** is the time the packet was sent from the server and ***PC*** a packet counter%100.   
+For example:   
       <img src="https://github.com/Kyparissis/Networks1-2022-Assignment/blob/main/reports/media/other/echoExample2.jpg" alt="Echo packets Samples">
 
-   - Use the ```image_request_code_withoutErrors``` code to receive **ERROR-FREE** *.jpg* images taken by the virtual lab's `VideoCoder` (Hosted at http://ithaki.eng.auth.gr/netlab/video.html) of a camera placed on a road near the School Of Engineering of Aristotle University Of Thessaloniki.  
-Example:   
+   - Use the ```image_request_code_withoutErrors``` code,  in the `generateImage()` and `receiveImageBytes()`, to receive **ERROR-FREE** *.jpg* images taken by the virtual lab's `VideoCoder` (Hosted at http://ithaki.eng.auth.gr/netlab/video.html) of a camera placed on a road near the School Of Engineering of Aristotle University Of Thessaloniki.  
+For example:   
       <img src="https://github.com/Kyparissis/Networks1-2022-Assignment/blob/main/reports/media/other/errorFreeExample.jpg" alt="Error-free image sample">    
-   - Use the ```image_request_code_withErrors``` code to receive *.jpg* images taken by the virtual lab's `VideoCoder` (Hosted at http://ithaki.eng.auth.gr/netlab/video.html) (Those images have **ERRORS** on them) of a camera placed on a road near the School Of Engineering of Aristotle University Of Thessaloniki.  
-Example:   
+   - Use the ```image_request_code_withErrors``` code,  in the `generateImage()` and `receiveImageBytes()`, to receive *.jpg* images taken by the virtual lab's `VideoCoder` (Hosted at http://ithaki.eng.auth.gr/netlab/video.html) (Those images have **ERRORS** on them) of a camera placed on a road near the School Of Engineering of Aristotle University Of Thessaloniki.  
+For example:   
       <img src="https://github.com/Kyparissis/Networks1-2022-Assignment/blob/main/reports/media/other/errorExample.jpg" alt="Error image sample"> 
    - Use the ```gps_request_code``` code to receive [NMEA Protocol](http://www.nmea.org/) ( Global Positioning System Fix Data, *$GPGGA* ) GPS points' packets from a pre-saved route, parse those point's packets and find at least 4 points with distance of at least 4'' between the one to the next one.
-Those NMEA Protocol GPS type packets format can be found [**HERE**](http://ithaki.eng.auth.gr/netlab/sirf-nmea-reference-manual.pdf) *(Page 13)*.   
-Example:   
+The NMEA Protocol GPS type packets format is found [**HERE**](http://ithaki.eng.auth.gr/netlab/sirf-nmea-reference-manual.pdf) *(Page 13)*.   
+For example:   
       <img src="https://github.com/Kyparissis/Networks1-2022-Assignment/blob/main/reports/media/other/GPSExample.jpg" alt="GPS packets Samples">   
-Then we request an image/screenshot from [Google Maps](https://www.google.com/maps), pin-pointing those points, from Ithaki using a `T=AABBCCDDEEZZ` parameter generated by our algorithm (Point's Latitude: *AA°BB'CC''* and Longitude: *DD°EE'ZZ''*) and the SAME function we created to receive images from Ithaki before (The *T=* parameter can be repeated 9 times after the ```gps_request_code```).  
-Example:   
+Then we request an image/screenshot from [Google Maps](https://www.google.com/maps), pin-pointing those points, from Ithaki using a `T=AABBCCDDEEZZ` parameter generated by our algorithm (Point's Latitude: *AA°BB'CC''* and Longitude: *DD°EE'ZZ''*) and the functions `generateImage()` and `receiveImageBytes()` (The *T=* parameter can be repeated 9 times after the ```gps_request_code```).  
+For example:   
       <img src="https://github.com/Kyparissis/Networks1-2022-Assignment/blob/main/reports/media/other/GPSImageExample.jpg" alt="GPS image sample">   
    - Use the two ```ack_result_code``` and ```nack_result_code``` codes to receive ARQ type packets for at least 4 minutes, parse them and then uses an ARQ - Stop and Wait algorithm to check for errors and either re-requests the same packet or requests a new one, by comparing the *FCS* value with the result of the *XOR* operator applied to the pseudoencrypted message/string, of the packet, sequentially.   
 Then, also, calculate the system's response time.   
 Then we create a scatter chart, using MS Excel, to analyse our system.   
 Also then we create a histogram, using MS Excel, to find the probability distribution of the number of re-requests per packet, due to errors.   
 ARQ type packets have the following format: `PSTART DD-MM-YYYY HH-MM-SS PC <ΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧ> FCS PSTOP`   
-,where ***DD-MM-YYYY*** is the date and ***HH-MM-SS*** the time the packet was sent from the server, ***PC*** a packet counter%100, *ΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧ* is the pseudoencrypted message/string and *FCS* the Frame Check Sequence's Decimal Value.   
-Example:   
+,where ***DD-MM-YYYY*** is the date, ***HH-MM-SS*** is the time the packet was sent from the server, ***PC*** a packet counter%100, *ΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧΧ* is a 16-char pseudoencrypted message/string and *FCS* the Frame Check Sequence's Decimal Value.   
+For example:   
       <img src="https://github.com/Kyparissis/Networks1-2022-Assignment/blob/main/reports/media/other/ARQExample.jpg" alt="ARQ packets samples">   
 Finally, we find the ***Bit Error Rate (BER)*** of the ARQ type packets we received during this time.   
    
@@ -68,6 +69,7 @@ Finally, we find the ***Bit Error Rate (BER)*** of the ARQ type packets we recei
 *( The request codes are provided by [Ithaki's webserver](http://ithaki.eng.auth.gr/netlab/index.html) and are valid for a 2-hour session. )*     
 
 ---
+
 ## Output
 *After each session, we store the `output` folder, where the code's output is stored, into the `sessions-output` folder.*   
 *( Session interval needed to be <body>&#8805;</body> 48-Hours)*     
@@ -78,15 +80,21 @@ Finally, we find the ***Bit Error Rate (BER)*** of the ARQ type packets we recei
 *(Date: 15/04/2022)*   
 [**HERE**](https://github.com/Kyparissis/Networks1-2022-Assignment/tree/main/sessions-output/session-2%4015-04-2022).    
 
+---
 
 ## Reports
 *( The media used in the sumbitted reports can be found here [**HERE**](https://github.com/Kyparissis/Networks1-2022-Assignment/tree/main/reports/media). )*
 
+---
 
 ## Installation / How to use   
 *This project has been developed and tested using the [**Eclipse IDE for Java Developers**](https://www.eclipse.org/downloads/packages/release/kepler/sr1/eclipse-ide-java-developers).*   
+
+### Eclipse
+On Eclipse, all you have to do is (...)
    
-However, you can run/use this code on your terminal using the following steps:   
+### Terminal
+You can run/use this code on your terminal using the following steps:   
 - First of all, clone this repo:
 ```shell
 git clone https://github.com/Kyparissis/Networks1-2022-Assignment.git
@@ -99,5 +107,8 @@ cd Networks1-2022-Assignment/
 
 
 
-```  
+``` 
+#### Maven
+You can run/use this code, if you have [Maven](https://maven.apache.org/install.html) installed by doing:
+
 (...)
