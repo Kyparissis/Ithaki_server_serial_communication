@@ -2,7 +2,7 @@
 
 ## JAVA SERIAL COMMUNICATIONS PROGRAMMING
    
-> <img src="https://www.auth.gr/wp-content/uploads/LogoAUTHwhite300ppi.png" alt="LogoAUTHwhite300ppi" style="height:100px; width:100px;" align="right">  
+> <img src="https://www.auth.gr/wp-content/uploads/LogoAUTHwhite300ppi.png" alt="LogoAUTHwhite300ppi" style="height:150px; width:150px;" align="right">  
 > 
 > [**Department of Electrical and Computer Engineering**](http://ee.auth.gr/),   
 [*Aristotle University of Thessaloniki*](https://www.auth.gr/)   
